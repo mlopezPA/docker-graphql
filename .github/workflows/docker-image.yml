@@ -24,6 +24,7 @@ jobs:
         minor_pattern: "feat:"
         # A string to determine the format of the version output
         format: "${major}.${minor}.${patch}-prerelease${increment}"
+        bump_each_commit: true
       id: version
     
     - name: Docker login
