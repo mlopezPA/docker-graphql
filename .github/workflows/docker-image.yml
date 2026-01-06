@@ -26,9 +26,11 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build -t mlopezperfect/docker-graphql:0.0.2 .
-
+        docker build -t mlopezperfect/docker-graphql:latest .
+        
     - name: Push the Docker image
       run: |
         docker push mlopezperfect/docker-graphql:0.0.2
+        docker push mlopezperfect/docker-graphql:latest
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
